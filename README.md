@@ -1,12 +1,12 @@
-# Vue Tutorial
+# Tutorial for Vue.js 3.x
 
-## Check installation
+### Check installation
 
 ```sh
 $ vue --version
 ```
 
-## Installation
+### Installation
 
 ```sh
 # make sure remove all vue cli
@@ -17,17 +17,17 @@ $ sudo npm install --global vue
 $ sudo npm install --global @vue/cli@latest
 ```
 
-## Update Vue version
+### Update Vue version
 
 ```sh
 $ npm update -g @vue/cli
 ```
 
-## VSCode Extension
+### VSCode Extension
 
 - Install `Vetur`
 
-## Create Vue Project
+### Create Vue Project
 
 ```sh
 $ vue create <project_name>
