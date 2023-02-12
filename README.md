@@ -91,3 +91,45 @@ $ npm update -g @vue/cli
     },
   };
   ```
+
+### Routes in Vue.js
+
+There are three different ways of importing components
+
+```js
+import HomeView from "../views/HomeView.vue";
+
+const routes = [
+  {
+    path: "/",
+    name: "home",
+    /* option 1 */
+    component: HomeView,
+  },
+  {
+    path: "/about",
+    name: "about",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    /* option 2 */
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    /* option 3 */
+    component: () =>
+      import(
+        /* webpackChunkName: "about", webpackPrefetch: true */ "../views/ContactView.vue"
+      ),
+  },
+];
+```
+
+- option 1: import component at the top and add imported component. This option will import and load the view as the app starts
+
+- option 2: add inline import component. This option will import and load the view as user click the link to show the view. This is good for light-weight views with less chance of opening.
+
+- option 3: add inline import component with `webpackPrefetch: true` option. This option prefetch the view as the app starts and store in the cache. This is good for any view with large amount of data to load.
