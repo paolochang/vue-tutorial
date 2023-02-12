@@ -32,62 +32,62 @@ $ npm update -g @vue/cli
 
 - Default Setup with Vue.js 3.x
 
-```sh
-$ vue create <project_name>
-Vue CLI v5.0.8
-? Please pick a preset: (Use arrow keys)
-❯ Default ([Vue 3] babel, eslint)
-  Default ([Vue 2] babel, eslint)
-  Manually select features
-```
+  ```sh
+  $ vue create <project_name>
+  Vue CLI v5.0.8
+  ? Please pick a preset: (Use arrow keys)
+  ❯ Default ([Vue 3] babel, eslint)
+    Default ([Vue 2] babel, eslint)
+    Manually select features
+  ```
 
 - Manual Setup
 
-```sh
-$ vue create <project_name>
-Vue CLI v5.0.8
-? Please pick a preset: Manually select features
-? Check the features needed for your project: Babel, Router, Vuex, Linter
-? Choose a version of Vue.js that you want to start the project with 3.x
-? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
-? Pick a linter / formatter config: Standard
-? Pick additional lint features: Lint on save
-? Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files
-? Save this as a preset for future projects? Yes
-? Save preset as: Basic
-```
+  ```sh
+  $ vue create <project_name>
+  Vue CLI v5.0.8
+  ? Please pick a preset: Manually select features
+  ? Check the features needed for your project: Babel, Router, Vuex, Linter
+  ? Choose a version of Vue.js that you want to start the project with 3.x
+  ? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+  ? Pick a linter / formatter config: Standard
+  ? Pick additional lint features: Lint on save
+  ? Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files
+  ? Save this as a preset for future projects? Yes
+  ? Save preset as: Basic
+  ```
 
 ### ESLint and Code Formatting with Prettier
 
-Create `.prettierrc` file and add all properties
+- Create `.prettierrc` file and add all properties
 
-```json
-{
-  "semi": false,
-  "bracketSpacing": true,
-  "singleQuote": true,
-  "useTabs": false,
-  "trailingComma": "none",
-  "printWidth": 80
-}
-```
+  ```json
+  {
+    "semi": false,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "useTabs": false,
+    "trailingComma": "none",
+    "printWidth": 80
+  }
+  ```
 
-In `.eslintrc.js`
+- In `.eslintrc.js`
 
-```js
-module.exports = {
-  root: true,
-  env: {
-    node: true,
-  },
-  extends: ["plugin:vue/vue3-essential", "@vue/standard"],
-  parserOptions: {
-    parser: "@babel/eslint-parser",
-  },
-  rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "space-before-function-paren": off, // <- add this line
-  },
-};
-```
+  ```js
+  module.exports = {
+    root: true,
+    env: {
+      node: true,
+    },
+    extends: ["plugin:vue/vue3-essential", "@vue/standard"],
+    parserOptions: {
+      parser: "@babel/eslint-parser",
+    },
+    rules: {
+      "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+      "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+      "space-before-function-paren": off, // <- add this line
+    },
+  };
+  ```
