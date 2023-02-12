@@ -56,3 +56,38 @@ Vue CLI v5.0.8
 ? Save this as a preset for future projects? Yes
 ? Save preset as: Basic
 ```
+
+### ESLint and Code Formatting with Prettier
+
+Create `.prettierrc` file and add all properties
+
+```json
+{
+  "semi": false,
+  "bracketSpacing": true,
+  "singleQuote": true,
+  "useTabs": false,
+  "trailingComma": "none",
+  "printWidth": 80
+}
+```
+
+In `.eslintrc.js`
+
+```js
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+  },
+  extends: ["plugin:vue/vue3-essential", "@vue/standard"],
+  parserOptions: {
+    parser: "@babel/eslint-parser",
+  },
+  rules: {
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "space-before-function-paren": off, // <- add this line
+  },
+};
+```
