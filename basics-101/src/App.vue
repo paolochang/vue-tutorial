@@ -1,9 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/databinding/string">String</router-link> |
+      <router-link to="/databinding/html">HTML</router-link> |
+      <router-link to="/databinding/input">Input</router-link> |
+      <router-link to="/databinding/select">Select</router-link> |
+      <router-link to="/databinding/checkbox">Checkbox</router-link> |
+      <router-link to="/databinding/radio">Radio</router-link> |
+      <router-link to="/databinding/attribute">Attribute</router-link> |
+      <router-link to="/databinding/list">List</router-link> |
+      <router-link to="/databinding/class">Class</router-link> |
+      <router-link to="/databinding/style">Style</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
 <style>
