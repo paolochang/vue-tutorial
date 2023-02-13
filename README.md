@@ -133,3 +133,23 @@ const routes = [
 - option 2: add inline import component. This option will import and load the view as user click the link to show the view. This is good for light-weight views with less chance of opening.
 
 - option 3: add inline import component with `webpackPrefetch: true` option. This option prefetch the view as the app starts and store in the cache. This is good for any view with large amount of data to load.
+
+### Register Vue User Snppets
+
+1. File > Preference > Configure User Snippets
+
+2. Search by keyword `vue` and select `vue.json`
+
+3. Add the following in json file
+
+   ```json
+   {
+     "Generate Basic Vue Code": {
+       "prefix": "vue-start",
+       "body": [
+         "<template>\n\t<div></div>\n</template>\n\n<script>\nexport default {\n\tcomponents: {},\n\tdata() {\n\t\treturn {\n\t\t\tsampleData: ''\n\t\t}\n\t},\n\tsetup() {},\n\tcreated() {},\n\tmounted() {},\n\tunmounted() {},\n\tmethods: {}\n}\n</script>"
+       ],
+       "description": "Generate Basic Vue Code"
+     }
+   }
+   ```
